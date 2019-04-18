@@ -1,16 +1,12 @@
 # project_pitcho
 
-A new Flutter project.
+Une application qui permet a son utilisateur de choisir un eleve au hasard dans un fichier
 
-## Getting Started
+## Comment editer la liste d'eleves
 
-This project is a starting point for a Flutter application.
+#### Sur Android:
+- Ouvrir `/Android/data/com.nomdelapplication.` dans un editeur de texte
+- Ajouter un nom et prenom par ligne (le separateur est le caractere '\n')
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+#### Sur iPhone:
+Not yet supported
