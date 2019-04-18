@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'PitchoRandomizer',
       home: Scaffold(
           appBar: AppBar(
@@ -50,6 +51,9 @@ class HomeState extends State<Home> {
 
   String chooseRandomStudent() {
     final _random = new Random();
-    return (students[_random.nextInt(students.length)]);
+    if (students != null)
+      return (students[_random.nextInt(students.length)]);
+    else
+      return (null);
   }
 }
