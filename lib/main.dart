@@ -25,14 +25,14 @@ class MyAppState extends State<MyApp> {
       title: 'PitchoRandomizer',
       home: Scaffold(
           appBar: AppBar(
-            title: Text('PitchoRandomizer'),
+            title: Text('PitchoRandomizer', style: TextStyle(fontFamily: 'ProductSans'),),
             actions: <Widget>[
               IconButton(
-                icon: Icon(darkMode == true ? Icons.wb_sunny : Icons.brightness_3),
+                icon: Icon(
+                    darkMode == true ? Icons.wb_sunny : Icons.brightness_3),
                 onPressed: () {
                   darkMode = !darkMode;
-                  setState(() {
-                  });
+                  setState(() {});
                 },
               ),
               IconButton(
@@ -62,12 +62,14 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Center(
-            child: Text(
+        Expanded(
+            child: Center(
+                child: Text(
           student == null ? "null" : student,
           style: TextStyle(fontSize: 24.0),
-        )),
-        Padding(
+        ))),
+        Expanded(
+            child: Padding(
           padding: EdgeInsets.all(8.0),
           child: RaisedButton(
             child: Text(
@@ -80,9 +82,9 @@ class HomeState extends State<Home> {
               });
             },
           ),
-        )
+        ))
       ],
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.stretch,
     );
   }
