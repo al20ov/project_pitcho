@@ -6,8 +6,18 @@ void main() => runApp(MyApp());
 
 List<String> students;
 String student;
+bool darkMode = false;
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new MyAppState();
+  }
+}
+
+class MyAppState extends State<MyApp> {
+  ThemeData lightTheme = ThemeData(primarySwatch: Colors.indigo);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,6 +28,14 @@ class MyApp extends StatelessWidget {
             title: Text('PitchoRandomizer'),
             actions: <Widget>[
               IconButton(
+                icon: Icon(darkMode == true ? Icons.wb_sunny : Icons.brightness_3),
+                onPressed: () {
+                  darkMode = !darkMode;
+                  setState(() {
+                  });
+                },
+              ),
+              IconButton(
                 icon: Icon(Icons.add),
                 onPressed: () async {
                   students = await FileUtils.loadClassroom();
@@ -27,7 +45,7 @@ class MyApp extends StatelessWidget {
             ],
           ),
           body: new Home()),
-      theme: ThemeData.dark(),
+      theme: darkMode == true ? ThemeData.dark() : lightTheme,
     );
   }
 }
@@ -44,7 +62,11 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Center(child: Text(student == null ? "null" : student, style: TextStyle(fontSize: 24.0),)),
+        Center(
+            child: Text(
+          student == null ? "null" : student,
+          style: TextStyle(fontSize: 24.0),
+        )),
         Padding(
           padding: EdgeInsets.all(8.0),
           child: RaisedButton(
@@ -70,6 +92,6 @@ class HomeState extends State<Home> {
     if (students != null)
       return (students[_random.nextInt(students.length)]);
     else
-      return (null);
+      return ("You must first load a class file");
   }
 }
