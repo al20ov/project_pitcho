@@ -2,17 +2,11 @@
 
 Une application qui permet a son utilisateur de choisir un eleve au hasard dans un fichier
 
-### Comment editer la liste d'eleves
+## Screenshots
 
-#### Sur Android:
-- Ecrire un nom d'eleve par ligne dans un fichier avec ou sans extension sans laisser de ligne vide a la fin. Vous pouvez tres bien creer plusieurs fichier de classe et vous pouvez, par exemple creer un dossier "classes" dans lequel se trouveront "2nde5", "1reS2", "TS5".
-Un fichier de classe se presente comme cela:
-```
-Prenom NOM
-Prenom2 NOM2
-Prenom3 NOM3
-...
-```
-- Dans l'application, appuyer sur le bouton '+' en haut a droite dans la barre, cela va ouvrir un explorateur de fichier.
-- Naviguer jusque dans le directory ou se trouve le fichier precedemment ecrit, et selectionner le fichier de classe voulu.
-- Le fichier est maintenant en RAM sous forme de List<String>, vous pouvez a present appuyer sur le bouton "Choose random student", cela choisira un eleve au hasard dans la liste.
+![picture](screenshots/light.png)
+![picture](screenshots/dark.png)
+
+## Latest build
+
+Le dernier build en date de l'application se trouve dans latest-build
