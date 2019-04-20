@@ -4,9 +4,9 @@ Une application qui permet a son utilisateur de choisir un eleve au hasard dans 
 
 ## Screenshots
 
-![picture](screenshots/light.png | width=480)
-![picture](screenshots/dark.png | width=480)
+![picture](screenshots/light.png =480x)
+![picture](screenshots/dark.png =480x)
 
 ## Latest build
 
-Le dernier build en date de l'application se trouve dans latest-build
+Le dernier build en date se trouve dans latest-build
